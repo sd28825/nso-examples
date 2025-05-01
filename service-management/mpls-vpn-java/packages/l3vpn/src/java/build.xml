@@ -1,5 +1,0 @@
-<project name="l3vpn" default="all">
-  <property environment="env"/>
-
-  <import file="${env.NCS_DIR}/java/ncs-package.xml" />
-</project>
