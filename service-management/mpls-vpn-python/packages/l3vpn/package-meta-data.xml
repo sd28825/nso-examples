@@ -1,8 +1,8 @@
 <ncs-package xmlns="http://tail-f.com/ns/ncs-packages">
   <name>l3vpn</name>
   <package-version>2.0</package-version>
-  <description>Example service implemented in Python</description>
-  <ncs-min-version>5.7</ncs-min-version>
+  <description>Example service implemented in Python 3</description>
+  <ncs-min-version>6.4</ncs-min-version>
 
   <python-package>
     <vm-name>mpls-vpn</vm-name>

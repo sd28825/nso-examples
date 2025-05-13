@@ -1,4 +1,4 @@
-# -*- mode: python90; python-indent: 4 -*-
+# -*- mode: python; python-indent: 4 -*-
 """Example NCS Service module.
 """
 
@@ -105,7 +105,7 @@ def setup_qos_class(service, ce_endpoint, qv, d, e):
     if e.name == d.qos_class:
         try:
             class_dscp = str(e.dscp_value)
-        except Exception:
+        except Exception as e:
             class_dscp = ' '
 
         qv.add('CLASS_DSCP', class_dscp)
@@ -116,7 +116,7 @@ def setup_qos_class(service, ce_endpoint, qv, d, e):
                 tmpl = ncs.template.Template(service)
                 tmpl.apply('l3vpn-qos-prio', qv)
                 tmpl.apply('l3vpn-qos-pe-prio', qv)
-        except Exception:
+        except Exception as e:
             tmpl = ncs.template.Template(service)
             tmpl.apply('l3vpn-qos', qv)
             tmpl.apply('l3vpn-qos-pe', qv)
